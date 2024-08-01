@@ -38,7 +38,7 @@ const Reviews = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
-          className="am:w-[280px] relative flex h-[500px] w-[800px] items-center justify-center overflow-hidden lg:h-[450px] lg:w-[600px] md:h-[400px] md:w-[95%] sm:h-[600px]"
+          className="am:w-[280px] relative flex h-[500px] w-[800px] items-center justify-center overflow-hidden lg:h-[450px] lg:w-[600px] md:h-[400px] md:w-[95%] sm:h-[600px] sm:w-[280px]"
         >
           {reviewsData.map((review, i) => (
             <motion.div

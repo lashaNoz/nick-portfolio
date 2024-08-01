@@ -21,7 +21,9 @@ const PricingPlans = () => {
             }}
             key={i}
             className={`relative flex flex-col gap-y-6 p-6 rounded-xl border border-red-400 text-gray-600 sm:w-[270px] dark:bg-zinc-700 transition-colors ${
-              i === 1 ? "w-[370px] bg-white" : "w-[350px] bg-zinc-50"
+              i === 1
+                ? "w-[370px] bg-white xl:w-[320px]"
+                : "w-[350px] bg-zinc-50 xl:w-[300px]"
             }`}
           >
             <h1 className="text-center text-3xl font-light tracking-wide transition-colors dark:text-white lg:text-2xl">

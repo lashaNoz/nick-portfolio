@@ -11,7 +11,7 @@ const Navbar = ({ id }) => {
           Brown
         </span>
       </a>
-      <div className="flex flex-col gap-y-3">
+      <div className="flex flex-col gap-y-3 sm:gap-y-2">
         {navbarData.map((item, i) => (
           <motion.a
             href={`/#${item.id}`}

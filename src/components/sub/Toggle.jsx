@@ -49,9 +49,9 @@ const Toggle = ({ children }) => {
   return (
     <main ref={mainRef}>
       <div className="bg-zinc-50 transition-colors dark:bg-zinc-800">
-        <div className="mx-auto max-w-[1200px] xl:w-full xl:px-[90px] md:pr-[20px]">
+        <div className="mx-auto flex max-w-[1200px] justify-center overflow-hidden xl:w-full xl:px-[90px] sm:pl-[80px] sm:pr-5">
           <button
-            className="fixed right-14 top-10 text-2xl text-yellow-600 transition-colors hover:text-yellow-500"
+            className="fixed right-14 top-10 z-50 text-2xl text-yellow-600 transition-colors hover:text-yellow-500 sm:right-10"
             onClick={(e) => {
               setDarkTheme(!darkTheme);
               if (!darkTheme) {
@@ -64,14 +64,14 @@ const Toggle = ({ children }) => {
             }}
           >
             <motion.span
-              className="absolute block text-3xl"
+              className="absolute block rounded-full bg-zinc-50 p-1 text-3xl dark:bg-zinc-800"
               initial={{ scale: darkTheme ? 0 : 1 }}
               animate={{ scale: darkTheme ? 0 : 1 }}
             >
               {moonIcon}
             </motion.span>
             <motion.span
-              className="absolute block text-4xl"
+              className="absolute block rounded-full bg-zinc-50 p-1 text-4xl dark:bg-zinc-800"
               initial={{ scale: darkTheme ? 1 : 0 }}
               animate={{ scale: darkTheme ? 1 : 0 }}
             >
