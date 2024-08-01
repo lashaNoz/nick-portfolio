@@ -45,7 +45,7 @@ const Projects = () => {
           </motion.button>
         ))}
       </div>
-      <div className="flex flex-wrap items-center justify-center gap-12">
+      <div className="flex flex-wrap items-center justify-center gap-5">
         {projectsData
           .filter((project) => {
             return project.tech.some((item) =>
