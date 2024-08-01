@@ -20,28 +20,30 @@ const Toggle = ({ children }) => {
   };
 
   useEffect(() => {
-    let storedTheme = reactLocalStorage.get("darkTheme");
+    const darkTheme = reactLocalStorage.get("darkTheme");
+    console.log(darkTheme);
 
-    storedTheme = storedTheme !== undefined && JSON.parse(storedTheme);
+    const darkThemeParsed = darkTheme !== undefined && JSON.parse(darkTheme);
 
     const systemTheme =
       typeof window !== "undefined" &&
       window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-    if (storedTheme === undefined) {
-      console.log("Undefined");
+    if (darkTheme === undefined) {
       if (systemTheme) {
         addDarkTheme();
       } else {
         removeDarkTheme();
       }
-    } else if (storedTheme) {
-      console.log("trueeee");
+    } else if (darkThemeParsed) {
+      console.log("Add dark theme");
       addDarkTheme();
     } else {
-      console.log("falseeee");
+      console.log("remove dark theme");
       removeDarkTheme();
     }
+
+    console.log(darkTheme, darkThemeParsed, systemTheme);
   }, []);
 
   //
@@ -51,7 +53,7 @@ const Toggle = ({ children }) => {
       <div className="bg-zinc-50 transition-colors dark:bg-zinc-800">
         <div className="mx-auto flex max-w-[1200px] justify-center overflow-hidden xl:w-full xl:px-[90px] sm:pl-[80px] sm:pr-5">
           <button
-            className="fixed right-14 top-10 z-50 text-2xl text-yellow-600 transition-colors hover:text-yellow-500 sm:right-10"
+            className="fixed right-14 top-10 z-40 text-2xl text-yellow-600 transition-colors hover:text-yellow-500 sm:right-10"
             onClick={(e) => {
               setDarkTheme(!darkTheme);
               if (!darkTheme) {
