@@ -23,8 +23,6 @@ const Contact = () => {
           />
         </motion.div>
         <motion.form
-          action="POST"
-          data-netlify="true"
           className="flex w-[600px] flex-col gap-3 lg:w-[400px] sm:w-full"
           initial={{ opacity: 0, x: 150 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -36,25 +34,21 @@ const Contact = () => {
               className="w-full rounded-md border border-yellow-500 bg-zinc-100 px-4 py-2 text-sm tracking-wider text-gray-500 outline-none"
               type="text"
               placeholder="Your Name"
-              name="name"
             />
             <input
               className="w-full rounded-md border border-yellow-500 bg-zinc-100 px-4 py-2 text-sm tracking-wider text-gray-500 outline-none"
               type="email"
               placeholder="Your Email"
-              name="email"
             />
           </div>
           <input
             className="rounded-md border border-yellow-500 bg-zinc-100 px-4 py-2 text-sm tracking-wider text-gray-500 outline-none"
             type="text"
             placeholder="Subject"
-            name="subject"
           />
           <textarea
             className="max-h-[250px] min-h-[150px] rounded-md border border-yellow-500 bg-zinc-100 px-4 py-2 text-sm tracking-wider text-gray-500 outline-none"
             placeholder="Write Me..."
-            name="message"
           ></textarea>
           <input
             className="cursor-pointer rounded-md border border-yellow-500 bg-yellow-600 px-4 py-2 text-sm font-light tracking-wider text-white outline-none transition-colors hover:bg-yellow-500"
