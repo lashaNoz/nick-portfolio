@@ -30,7 +30,7 @@ const Navbar = ({ id }) => {
             <motion.span
               className={`text-[10px] tracking-wide opacity-0 transition-all duration-300 group-hover:translate-x-0 dark:text-white group-hover:opacity-100 text-center ${
                 i % 2 === 0 ? "translate-x-2" : "-translate-x-2"
-              } ${item.id === id && "-translate-x-0 opacity-100"}`}
+              } ${item.id === id && "translate-x-0 opacity-100"}`}
             >
               {item.name}
             </motion.span>
