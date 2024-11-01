@@ -87,7 +87,7 @@ const Landing = () => {
             </motion.span>
           </motion.div>
           <h1 className="text-center text-3xl font-bold tracking-wider text-gray-500 transition-colors dark:text-white sm:text-2xl">
-            My Name is Nick Brown &
+            My Name is Lasha &
           </h1>
           <p className="text-lg tracking-wider text-gray-700 transition-colors dark:text-gray-200">
             I like animations 🤗
